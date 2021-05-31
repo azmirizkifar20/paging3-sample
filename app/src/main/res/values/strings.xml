@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Paging 3</string>
+    <string name="notification">Notifikasi</string>
+    <string name="server_error">Internal Server Error, please try again.</string>
+    <string name="timeout">Request Timeout</string>
+    <string name="empty_notif">Belum ada data notifikasi</string>
+    <string name="retry">Retry</string>
+</resources>
