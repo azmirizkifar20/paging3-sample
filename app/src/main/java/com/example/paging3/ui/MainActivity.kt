@@ -35,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.apply {
+            setSupportActionBar(this)
+            supportActionBar?.setDisplayShowTitleEnabled(false)
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             window.apply {
                 addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
