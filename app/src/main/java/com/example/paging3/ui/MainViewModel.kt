@@ -6,20 +6,19 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.example.paging3.network.ApiService
-import com.example.paging3.network.Notification
+import com.example.paging3.network.response.Product
+import com.example.paging3.network.service.ApiService
 import kotlinx.coroutines.flow.Flow
 
 class MainViewModel(
     private val apiService: ApiService
 ) : ViewModel() {
 
-    fun getNotification(token: String, direction: String): Flow<PagingData<Notification>> =
-        Pager(PagingConfig(pageSize = 12)) {
-            MainPagingSource(
-                token,
-                direction,
-                this@MainViewModel.apiService
-            )
-        }.flow.cachedIn(viewModelScope)
+    fun recomendedProducts(
+        token: String,
+        search: String,
+        direction: String
+    ): Flow<PagingData<Product>> = Pager(PagingConfig(12)) {
+        MainPagingSource(token, search, direction, apiService)
+    }.flow.cachedIn(viewModelScope)
 }

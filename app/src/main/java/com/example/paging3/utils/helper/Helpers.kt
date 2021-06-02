@@ -1,6 +1,15 @@
 package com.example.paging3.utils.helper
 
+import java.text.NumberFormat
+import java.util.*
+
 object Helpers {
+
+    fun changeToRupiah(uang: Double): String {
+        val localeID =  Locale("in", "ID")
+        val numberFormat = NumberFormat.getCurrencyInstance(localeID)
+        return numberFormat.format(uang).toString()
+    }
 
     fun convertToDateTime(dateTime: String): String {
         val arrTime = dateTime.split(" ")

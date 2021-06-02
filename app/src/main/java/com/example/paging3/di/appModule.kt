@@ -1,6 +1,6 @@
 package com.example.paging3.di
 
-import com.example.paging3.network.ApiService
+import com.example.paging3.network.service.ApiService
 import com.example.paging3.ui.MainViewModel
 import com.example.paging3.utils.helper.NetworkHelper
 import okhttp3.OkHttpClient

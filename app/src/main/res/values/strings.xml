@@ -3,6 +3,10 @@
     <string name="notification">Notifikasi</string>
     <string name="server_error">Internal Server Error, please try again.</string>
     <string name="timeout">Request Timeout</string>
-    <string name="empty_notif">Belum ada data notifikasi</string>
+    <string name="empty_product">Belum ada data produk</string>
     <string name="retry">Retry</string>
+    <string name="image_description">Image Description</string>
+    <string name="search">Search</string>
+    <string name="rekomendasi_produk">Rekomendasi Produk</string>
+    <string name="search_product">Cari produk</string>
 </resources>
